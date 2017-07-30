@@ -1,0 +1,12 @@
+.btn-menu{
+  border: none;
+  background-color: $first-color;
+  padding: 60px;
+}
+
+
+@media (min-width: $min-tablet-size) {
+  .btn-menu{
+    display: none;
+  }
+}

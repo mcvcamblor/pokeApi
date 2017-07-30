@@ -1,0 +1,42 @@
+#logo {
+  height: 150px;
+  width: 450px;
+}
+
+.header {
+  background-color: $first-color;
+}
+
+.header-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-small{
+  display: none;
+}
+
+.nav-small-show{
+  display: block;
+}
+
+.nav-small-link{
+  text-decoration: none;
+}
+
+.nav-small-item{
+  list-style: none;
+}
+
+@media (min-width: $min-tablet-size) {
+  .nav{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 70%;
+  }
+}
