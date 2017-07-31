@@ -21,29 +21,29 @@
       </button>
 
       <ul class="nav">
-        <li ><a class="nav-small-link" href="#">Pokemon</a></li>
-        <li ><a class="nav-small-link" href="#">Acerca de</a></li>
+        <li class="item-header"><a class="nav-small-link" href="#">Pokemon</a></li>
+        <li class="item-header"><a class="nav-small-link" href="miyo.html">Acerca de</a></li>
       </ul>
     </div>
 
     <ul class="nav-small">
       <li class="nav-small-item"><a class="nav-small-link" href="#">Pokemon</a></li>
-      <li class="nav-small-item"><a class="nav-small-link" href="#">Acerca de</a></li>
+      <li class="nav-small-item"><a class="nav-small-link" href="miyo.html">Acerca de</a></li>
     </ul>
 
   </header>
 
-  <h1 class="phrase"><a href="#">¿De dónde sacáis los datos?</a></h1>
-  <div class="info">
+    <button id="btn-modal" class="btn-modal">¿De dónde sacáis los datos?</button>
 
-    <div>
-      <button class="btn-close" type="button" name="button">cerrar</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><a href="https://pokeapi.co/">https://pokeapi.co/</a></p>
+        <p>It is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="cards-container">
-
-  </div>
+  <div class="cards-container"></div>
 <script src="index.js" charset="utf-8"></script>
 </body>
 </html>

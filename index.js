@@ -9,30 +9,21 @@ function showOrHideMenu() {
   mobileMenu.classList.toggle('nav-small-show');
 
 }
+
 // modal
-var sentence = document.querySelector('.phrase');
-var modal = document.querySelector('.info');
-// var buttonOpen = document.querySelector('btn-open');
-var buttonClose = document.querySelector('h1');
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("btn-modal");
+var span = document.getElementsByClassName("close")[0];
 
-function showProduct(event) {
-  sentence.innerHTML = event.target.innerHTML;
-  modal.classList.add('modal-show');
+btn.onclick = function() {
+    modal.style.display = "block";
 }
 
-sentence.addEventListener ('click', showProduct);
-
-function closeModal() {
-  modal.classList.remove('modal-show');
+span.onclick = function() {
+    modal.style.display = "none";
 }
-
-buttonClose.addEventListener ('click', closeModal);
 
 // api pokemon
-var pokemonName = document.getElementById('name');
-var picture = document.getElementById('picture');
-var num = document.getElementById('num');
-var type= document.getElementById('type');
 var numberOfPokemons = 50;
 
 function requestInfo(number) {
@@ -47,14 +38,11 @@ function requestInfo(number) {
   request.send();
 }
 
-
 function refreshWeb(request){
   if(request.status >= 200 && request.status < 400) {
     var data = JSON.parse(request.responseText);
     var container = document.querySelector('.cards-container');
-    container.innerHTML += '<p><img src="' + data.sprites.front_default +'"></p>';
-    container.innerHTML += '<p>Nombre:' + data.name +'</p>';
-    container.innerHTML += '<p>Número:' + data.id +'</p>';
+    container.innerHTML += '<div><a><img src="' + data.sprites.front_default +'"></a><h2>Nombre:&nbsp' + data.name + '</h2><h4>Número:&nbsp' + data.id +'</h4></div>';
     var types = data.types;
     if(types.length === 1){
       container.innerHTML += '<p>Tipo:' + types[0].type.name +'</p>';

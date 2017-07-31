@@ -4,6 +4,17 @@
   padding: 60px;
 }
 
+.btn-modal {
+  height:50px;
+  width:225px;
+  position:relative;
+  left:50%;
+  font-weight: bold;
+  background-color: #f8d030;
+  color: #3466af;
+  font-size: $button-size;
+  margin: 10px;
+}
 
 @media (min-width: $min-tablet-size) {
   .btn-menu{
